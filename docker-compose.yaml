@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  pypi:
+    build:
+      context: .
+    container_name: aiv-pypi
+    hostname: aiv-pypi.local
+    environment:
+      - PYPI_OVERWRITE=true
+      - PYPI_EXTRA=-v
+    volumes:
+      - /pypi:/pypi:rw
+    expose:
+      - 80/tcp
+    ports:
+      - "8080:80"

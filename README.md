@@ -35,4 +35,8 @@ python setup.py sdist upload -r aiv-pypi
 ```
 pip install --extra-index-url http://<server IP adress>:8080 <package name>
 ```
+for a specific version of the package,
+```
+pip install --extra-index-url http://<server IP adress>:8080 <package name>==<version>
+```
 
